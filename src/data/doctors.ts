@@ -1,0 +1,223 @@
+export interface Doctor {
+  id: string;
+  name: string;
+  qualification: string;
+  specialty: string;
+  departmentId: string;
+  experience: number;
+  bio: string;
+  expertise: string[];
+  education: string[];
+  languages: string[];
+  availability: string;
+  availableDays: string[];
+  fee: number;
+  available: boolean;
+}
+
+/**
+ * SAMPLE doctor profiles for demonstration. Replace with real, verified
+ * doctor information before production use — do not present these as real.
+ */
+export const doctors: Doctor[] = [
+  {
+    id: "dr-ananya-deshmukh",
+    name: "Dr. Ananya Deshmukh",
+    qualification: "MBBS, MD, DM (Cardiology)",
+    specialty: "Interventional Cardiology",
+    departmentId: "cardiology",
+    experience: 16,
+    bio: "Dr. Deshmukh is a senior interventional cardiologist with over 15 years of experience in coronary procedures and heart-failure management. She is known for her patient-first approach to complex cardiac cases and her work in preventive cardiology.",
+    expertise: ["Coronary Angioplasty", "Heart Failure Management", "Preventive Cardiology", "Echocardiography"],
+    education: ["MBBS — Grant Medical College", "MD (General Medicine) — AIIMS New Delhi", "DM (Cardiology) — PGIMER Chandigarh"],
+    languages: ["English", "Hindi", "Marathi"],
+    availability: "Mon – Fri · 10:00 AM – 2:00 PM",
+    availableDays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    fee: 1200,
+    available: true,
+  },
+  {
+    id: "dr-rohan-iyer",
+    name: "Dr. Rohan Iyer",
+    qualification: "MBBS, MD, DNB (Cardiology)",
+    specialty: "Non-Invasive Cardiology",
+    departmentId: "cardiology",
+    experience: 11,
+    bio: "Dr. Iyer specialises in cardiac imaging and risk assessment, helping patients catch heart disease early. He runs the hospital's cardiac rehabilitation programme.",
+    expertise: ["Echocardiography", "Stress Testing", "Cardiac Rehab", "Lipid Clinic"],
+    education: ["MBBS — KEM Hospital Mumbai", "MD — Seth GS Medical College", "DNB (Cardiology) — NBE"],
+    languages: ["English", "Hindi", "Tamil"],
+    availability: "Mon – Sat · 4:00 PM – 7:00 PM",
+    availableDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    fee: 900,
+    available: true,
+  },
+  {
+    id: "dr-meera-krishnan",
+    name: "Dr. Meera Krishnan",
+    qualification: "MBBS, MD, DM (Neurology)",
+    specialty: "Stroke & Neurocritical Care",
+    departmentId: "neurology",
+    experience: 14,
+    bio: "Dr. Krishnan leads the hospital's stroke unit and has extensive experience in acute stroke intervention, epilepsy and neurophysiology.",
+    expertise: ["Acute Stroke Care", "Epilepsy", "EEG & Neurophysiology", "Headache Medicine"],
+    education: ["MBBS — Madras Medical College", "MD (Medicine) — CMC Vellore", "DM (Neurology) — NIMHANS Bengaluru"],
+    languages: ["English", "Hindi", "Tamil", "Malayalam"],
+    availability: "Tue – Sat · 9:00 AM – 1:00 PM",
+    availableDays: ["Tue", "Wed", "Thu", "Fri", "Sat"],
+    fee: 1400,
+    available: true,
+  },
+  {
+    id: "dr-arjun-malhotra",
+    name: "Dr. Arjun Malhotra",
+    qualification: "MBBS, MS (Ortho), Fellowship in Joint Replacement",
+    specialty: "Joint Replacement & Arthroscopy",
+    departmentId: "orthopedics",
+    experience: 18,
+    bio: "Dr. Malhotra has performed thousands of knee and hip replacements and arthroscopic procedures. He champions enhanced-recovery protocols that get patients walking within a day of surgery.",
+    expertise: ["Total Knee Replacement", "Hip Replacement", "Arthroscopy", "Sports Injuries"],
+    education: ["MBBS — AIIMS New Delhi", "MS (Orthopaedics) — AIIMS New Delhi", "Fellowship — Royal Orthopaedic Hospital, UK"],
+    languages: ["English", "Hindi", "Punjabi"],
+    availability: "Mon, Wed, Fri · 11:00 AM – 3:00 PM",
+    availableDays: ["Mon", "Wed", "Fri"],
+    fee: 1100,
+    available: true,
+  },
+  {
+    id: "dr-kavita-sharma",
+    name: "Dr. Kavita Sharma",
+    qualification: "MBBS, MD (Pediatrics), Fellowship in Neonatology",
+    specialty: "Pediatrics & Neonatology",
+    departmentId: "pediatrics",
+    experience: 10,
+    bio: "Dr. Sharma cares for newborns and children with warmth and patience. She leads our NICU team and runs the well-baby and vaccination clinics.",
+    expertise: ["Neonatal Care", "Childhood Vaccination", "Growth & Nutrition", "Pediatric Asthma"],
+    education: ["MBBS — BYL Nair Hospital Mumbai", "MD (Pediatrics) — Lokmanya Tilak Hospital", "Fellowship in Neonatology — Manipal Hospital"],
+    languages: ["English", "Hindi", "Marathi"],
+    availability: "Mon – Sat · 9:00 AM – 12:00 PM",
+    availableDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    fee: 800,
+    available: true,
+  },
+  {
+    id: "dr-sameer-rao",
+    name: "Dr. Sameer Rao",
+    qualification: "MBBS, MD (General Medicine)",
+    specialty: "Internal Medicine & Diabetology",
+    departmentId: "general-medicine",
+    experience: 9,
+    bio: "Dr. Rao focuses on diabetes, hypertension and preventive health. He believes in treating lifestyle causes, not just symptoms, and coordinates seamless specialist referrals.",
+    expertise: ["Diabetes Management", "Hypertension", "Preventive Health Checks", "Infectious Diseases"],
+    education: ["MBBS — St. John's Medical College Bengaluru", "MD (General Medicine) — KMC Manipal"],
+    languages: ["English", "Hindi", "Kannada", "Konkani"],
+    availability: "Mon – Sat · 10:00 AM – 6:00 PM",
+    availableDays: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+    fee: 600,
+    available: true,
+  },
+  {
+    id: "dr-priya-nair",
+    name: "Dr. Priya Nair",
+    qualification: "MBBS, MS (OBGYN), Fellowship in Laparoscopy",
+    specialty: "Obstetrics & Minimally Invasive Gynaecology",
+    departmentId: "obstetrics-gynaecology",
+    experience: 15,
+    bio: "Dr. Nair has guided thousands of mothers through safe deliveries and specialises in laparoscopic gynaecological surgery with faster recovery times.",
+    expertise: ["High-Risk Pregnancy", "Painless Delivery", "Laparoscopic Surgery", "Fertility Counselling"],
+    education: ["MBBS — Government Medical College Kottayam", "MS (OBGYN) — Amrita Institute", "Fellowship in Minimal Access Surgery"],
+    languages: ["English", "Hindi", "Malayalam"],
+    availability: "Mon, Tue, Thu, Sat · 10:00 AM – 1:00 PM",
+    availableDays: ["Mon", "Tue", "Thu", "Sat"],
+    fee: 1000,
+    available: true,
+  },
+  {
+    id: "dr-vikram-chandra",
+    name: "Dr. Vikram Chandra",
+    qualification: "MBBS, MD, DM (Medical Oncology)",
+    specialty: "Medical Oncology",
+    departmentId: "oncology",
+    experience: 17,
+    bio: "Dr. Chandra leads our tumour board and chemotherapy day-care unit. He is a strong advocate of evidence-based protocols combined with honest, compassionate communication.",
+    expertise: ["Chemotherapy", "Breast & Lung Cancer", "Targeted Therapy", "Palliative Care"],
+    education: ["MBBS — AIIMS New Delhi", "MD (Medicine) — PGIMER Chandigarh", "DM (Medical Oncology) — Adyar Cancer Institute"],
+    languages: ["English", "Hindi"],
+    availability: "Mon – Thu · 2:00 PM – 6:00 PM",
+    availableDays: ["Mon", "Tue", "Wed", "Thu"],
+    fee: 1500,
+    available: true,
+  },
+  {
+    id: "dr-nehal-kulkarni",
+    name: "Dr. Neha Kulkarni",
+    qualification: "MBBS, MD (Dermatology)",
+    specialty: "Clinical & Cosmetic Dermatology",
+    departmentId: "dermatology",
+    experience: 8,
+    bio: "Dr. Kulkarni treats acne, eczema, psoriasis and hair disorders, and offers skin-safe cosmetic procedures grounded in evidence, not trends.",
+    expertise: ["Acne & Rosacea", "Hair & Scalp Disorders", "Lasers", "Pediatric Dermatology"],
+    education: ["MBBS — DY Patil Medical College", "MD (Dermatology) — B J Medical College Pune"],
+    languages: ["English", "Hindi", "Marathi"],
+    availability: "Wed – Sun · 11:00 AM – 5:00 PM",
+    availableDays: ["Wed", "Thu", "Fri", "Sat", "Sun"],
+    fee: 700,
+    available: true,
+  },
+  {
+    id: "dr-aditya-verma",
+    name: "Dr. Aditya Verma",
+    qualification: "MBBS, MS (Ortho), Fellowship in Sports Medicine",
+    specialty: "Sports Orthopedics",
+    departmentId: "orthopedics",
+    experience: 11,
+    bio: "Dr. Verma works with athletes and active patients on ligament reconstruction, arthroscopy and return-to-play rehabilitation.",
+    expertise: ["ACL Reconstruction", "Shoulder Arthroscopy", "Cartilage Repair", "Physiotherapy Planning"],
+    education: ["MBBS — AFMC Pune", "MS (Orthopaedics) — Command Hospital", "Fellowship in Sports Medicine — ISAKOS"],
+    languages: ["English", "Hindi"],
+    availability: "Tue, Thu, Sat · 3:00 PM – 7:00 PM",
+    availableDays: ["Tue", "Thu", "Sat"],
+    fee: 950,
+    available: true,
+  },
+  {
+    id: "dr-sunita-menon",
+    name: "Dr. Sunita Menon",
+    qualification: "MBBS, MS (Ophthalmology)",
+    specialty: "Cataract & Refractive Surgery",
+    departmentId: "ophthalmology",
+    experience: 13,
+    bio: "Dr. Menon has performed over 10,000 cataract procedures and leads our LASIK and retina screening services.",
+    expertise: ["Phaco Cataract Surgery", "LASIK", "Diabetic Retinopathy Screening", "Glaucoma Care"],
+    education: ["MBBS — Calicut Medical College", "MS (Ophthalmology) — Giridhar Eye Institute", "Fellowship in Phacoemulsification"],
+    languages: ["English", "Hindi", "Malayalam"],
+    availability: "Mon – Fri · 9:00 AM – 1:00 PM",
+    availableDays: ["Mon", "Tue", "Wed", "Thu", "Fri"],
+    fee: 700,
+    available: true,
+  },
+  {
+    id: "dr-rajesh-pillai",
+    name: "Dr. Rajesh Pillai",
+    qualification: "MBBS, MD, DM (Gastroenterology)",
+    specialty: "Gastroenterology & Hepatology",
+    departmentId: "gastroenterology",
+    experience: 16,
+    bio: "Dr. Pillai specialises in therapeutic endoscopy and liver disease, and coordinates our gut-health and IBD clinics.",
+    expertise: ["Therapeutic Endoscopy", "Colonoscopy", "Liver Disease", "IBD"],
+    education: ["MBBS — Govt. Medical College Thiruvananthapuram", "MD (Medicine) — CMC Vellore", "DM (Gastroenterology) — SGPGI Lucknow"],
+    languages: ["English", "Hindi", "Malayalam"],
+    availability: "Mon, Wed, Fri · 10:00 AM – 2:00 PM",
+    availableDays: ["Mon", "Wed", "Fri"],
+    fee: 1200,
+    available: true,
+  },
+];
+
+export function getDoctor(id: string) {
+  return doctors.find((d) => d.id === id);
+}
+
+export function doctorsByDepartment(departmentId: string) {
+  return doctors.filter((d) => d.departmentId === departmentId);
+}
