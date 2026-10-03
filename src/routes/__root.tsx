@@ -120,6 +120,12 @@ function RootShell({ children }: { children: ReactNode }) {
     <html lang="en">
       <head>
         <HeadContent />
+        <script
+  src="https://www.maxyai.in/widget.js"
+  data-client-id="webnivo"
+  data-api-base="https://maxy-backend-kmv6.onrender.com"
+  defer>
+</script>
       </head>
       <body>
         {children}
